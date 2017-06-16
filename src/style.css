@@ -1,5 +1,13 @@
 .radar-container {
     display: flex;
+    /* source: https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide */
+    font-family: -apple-system,
+        BlinkMacSystemFont,
+        Segoe UI,
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        sans-serif;
 }
 .radar-ring1 {
     fill: #BABABA;
@@ -31,8 +39,9 @@
 }
 
 .blip {
-    font-size: 10px;
+    font-size: 9px;
     font-style: italic;
+    font-weight: 200;
     fill: #FFFFFF;
 }
 

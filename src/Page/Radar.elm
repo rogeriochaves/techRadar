@@ -5,7 +5,7 @@ import Html exposing (Html, div, h3, li, p, ul)
 import Random exposing (Generator)
 import Random.Extra as RandomExtra
 import Svg exposing (Attribute, Svg, g, path, svg, text, text_)
-import Svg.Attributes exposing (class, cx, cy, d, fill, height, r, transform, width, x, y)
+import Svg.Attributes exposing (class, cx, cy, d, fill, height, r, textAnchor, transform, width, x, y)
 import Svg.Events exposing (onClick, onMouseOut, onMouseOver)
 import Util.Svg as SvgUtil
 
@@ -339,8 +339,9 @@ svgForBlip position rowNum isNew =
         [ blipPathSvg
         , text_
             [ class "blip"
-            , x <| toString (position.x - 4)
-            , y <| toString (position.y + 2)
+            , x <| toString position.x
+            , y <| toString (position.y + 4)
+            , textAnchor "middle"
             ]
             [ text <| toString rowNum ]
         ]
